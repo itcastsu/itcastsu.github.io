@@ -1,0 +1,64 @@
+
+body{min-width: 320px;overflow-x: hidden;}
+div, span, a, header {
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+.site-nav{position: relative;z-index: 2;}
+.yunLogo{background: none;width: 100%;}
+.yunLogo h1{display: none;}
+.yunLogo:after{content:'传智云课堂';width: 100%;text-indent:0;text-align: center;color:#fff;font-family: "微软雅黑";font-size: 25px; padding-top: 5px;display: block;} 
+/*.nav{display: none;}*/
+
+.nav{position: absolute;top:60px;left:0;width: 100%;padding: 0;display: none;transition:all .2s;}
+.nav.on{display: block;}
+.nav li {width: 100%;}
+.nav li a{height: 40px; line-height: 40px; display: block; background: #262626;}
+.line{  width: 30px; height: 30px;  position: absolute; top: 20px; left: 20px; }
+.line div{width: 100%; height:3px;background-color: #fff;border-radius: 3px;position: absolute;left:0;top:0;-webkit-transition: transform .2s;transition: transform .2s;}
+.line div:nth-of-type(2){top:9px;}
+.line div:nth-of-type(3){top:18px;}
+
+.line.on div:nth-of-type(1){top:9px;-webkit-transform: rotate(45deg); transform: rotate(45deg);}
+.line.on div:nth-of-type(2){ -webkit-transform: rotate(-45deg);}
+.line.on div:nth-of-type(3){ display: none;}
+
+.user-icon{  width: 25px; height: 25px; background: url(../images/user-icon.png) no-repeat; background-size: contain; position: absolute; top: 16px; right: 10px;}
+.user-btn{display: none;}
+/*移动端焦点图分区*/
+.banner{display: none;}
+.focus{display: block; width:100%; height:auto;  margin:0 auto; position:relative; overflow:hidden;   }
+.focus .hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:5px; text-align:center;  }
+.focus .hd ul{ display:inline-block; height:5px; padding:3px 5px; background-color:rgba(255,255,255,0.7); 
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:0; vertical-align:top;
+}
+.focus .hd ul li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#8C8C8C; margin:0 5px;  vertical-align:top; overflow:hidden;   }
+.focus .hd ul .on{ background:#FE6C9C;  }
+
+.focus .bd{ position:relative; z-index:0; }
+.focus .bd li img{ width:100%;  height:auto; background:url(../images/loading.gif) center center no-repeat;  }
+.focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
+
+.content li{width: 100%;margin-left: 0;margin-right: 0;height:auto;min-height: 343px;}
+.con-title p{padding-bottom: 40px;}
+.footer-con dl{width: 25%;}
+.erweima{display: none;}
+.footer-b{height: auto;text-align: center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

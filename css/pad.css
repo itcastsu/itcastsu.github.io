@@ -1,0 +1,30 @@
+.yunLogo:after{ content:'pad'; }
+
+
+
+/* 注意版心 */
+.nav-inner{width: auto;padding-left:1%;padding-right: 1%;}
+.yunLogo{position: absolute;left:10px;top:0;}
+.nav{    width: 100%; margin-left: 0; padding-left: 200px; padding-right: 110px; box-sizing: border-box;}
+.user-btn{position: absolute;right: 10px;top:0;}
+.inner{width: auto;padding-left:1%;padding-right: 1%;}
+.free{height: auto;overflow: hidden;}
+.free-desk li{width: 33.3333%;}
+.free-desk img{width: 100%;}
+.free-desk-m{margin: 0;}
+
+.vip .all{display: none;}
+.content li{width: 32.3333%;margin:0 .5% 20px;box-sizing: border-box;position: relative;}
+.content li.nomargin{margin:0 .5% 20px;}
+.con-img{width: 100%;height: auto;}
+.content li img{width: 100%;}
+.con-buy{position: absolute; right: 0; bottom: 10px;}
+
+.con-title h2{height: auto;}
+.con-title h2 span{display: block;}
+.price{margin: 0;}
+
+.footer-con{width: auto;padding-left:1%;padding-right: 1%;}
+.footer-con dl{width: 20%;}
+.footer-b p{width: auto;padding-left:1%;padding-right: 1%;}
+.erweima{ right: 10px;}
