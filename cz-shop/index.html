@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header class="header">
+            <a href="#" class="header-left"></a>
+            <h3>传智商铺</h3>
+        </header>
+        <!-- banner -->
+        <div id="focus" class="focus">
+            <div class="hd">
+                <ul></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li><a href="#"><img src="img/tb1.jpg" /></a></li>
+                    <li><a href="#"><img src="img/tb2.jpg" /></a></li>
+                    <li><a href="#"><img src="img/tb3.jpg" /></a></li>
+            </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            TouchSlide({ slideCell:"#focus",
+                titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+                mainCell:".bd ul", 
+                effect:"leftLoop", 
+                autoPlay:true,//自动播放
+                autoPage:true //自动分页
+            });
+        </script>
+        <!-- 店铺信息 -->
+        <div class="stroe-info">
+            <div class="stroe-info-left">
+                <a href="#"><img src="index-assets/avator.jpg" alt="" /></a>
+            </div>
+            <div class="stroe-info-right">
+                <h1>快乐曲线养生旗舰店</h1>
+                <p> 商家好评率：<em>98%</em>     商家信用等级：<em>8</em>    </p>
+                <div class="stroe-info-right-bottom">
+                    <a href="#" class="btn-fav">收藏商铺</a>
+                    <a href="#" class="btn-contact">联系商家</a>
+                </div>
+            </div>
+        </div>
+
+<style>
+.row {
+  /*横*/
+    display: -webkit-box;
+    display: -webkit-flex; /* Safari */
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; 
+}
+.col {/*列*/
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: block;
+  width: 100%; 
+}
+.row-wrap {/*横不换行*/
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; 
+}    
+</style>
+<br />
+<br />
+<br />
+
+
+<style>
+.stroe-info2{  padding: 0.8rem 0.4rem;
+    height: 6.4rem;
+    box-sizing: border-box; background: pink;font-size: 18px;}
+
+.stroe-info2-left{width: 4.8rem;background: #ccc;margin-right: .8rem;}
+.stroe-info2-left a{padding: 3px;border: 1px solid #000;float: left;}
+.stroe-info2-right-bottom {height:1.76rem;background: #abc;line-height: 1.76rem;font-size: .8rem;}
+.stroe-info2-right-bottom .btn-fav{width: 4.32rem;margin-right: .8rem;background: gold;}
+.stroe-info2-right-bottom .btn-contact{background: purple;}
+</style>
+        <div class="stroe-info2">
+            <div class="row">
+                <div class="stroe-info2-left">
+                    <a href="#"><img src="index-assets/avator.jpg" alt="" /></a>
+                </div>
+                <div class="stroe-info2-right col">
+                    <h1>快乐曲线养生旗舰店</h1>
+                    <p> 商家好评率：<em>98%</em>     商家信用等级：<em>8</em>    </p>
+                    <div class="stroe-info2-right-bottom row">
+                        <a href="#" class="btn-fav">收藏商铺</a>
+                        <a href="#" class="btn-contact col">联系商家</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+
+
+    </div>
+</body>
+</html>
