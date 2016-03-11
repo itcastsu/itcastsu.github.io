@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>07-光效动画</title>
+
+<script src="libs/easeljs-0.8.1.min.js"></script>
+<script src="libs/tweenjs-0.6.1.min.js"></script>
+<script src="libs/movieclip-0.8.1.min.js"></script>
+<script src="libs/preloadjs-0.6.1.min.js"></script>
+<script src="07-光效动画.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+	ss = ss||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+loader.loadFile({src:"images/07_光效动画_atlas_.json", type:"spritesheet", id:"07_光效动画_atlas_"}, true);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	var queue = evt.target;
+	ss["07_光效动画_atlas_"] = queue.getResult("07_光效动画_atlas_");
+	exportRoot = new lib._07光效动画();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="970" height="500" style="background-color:#FFFFFF"></canvas>
+</body>
+</html>

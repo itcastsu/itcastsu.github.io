@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>08-文字流光</title>
+
+<script src="libs/easeljs-0.8.1.min.js"></script>
+<script src="libs/tweenjs-0.6.1.min.js"></script>
+<script src="libs/movieclip-0.8.1.min.js"></script>
+<script src="08-文字流光.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	exportRoot = new lib._08文字流光();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="550" height="400" style="background-color:#000000"></canvas>
+</body>
+</html>

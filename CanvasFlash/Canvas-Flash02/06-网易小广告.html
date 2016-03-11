@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06-网易小广告</title>
+
+<script src="libs/easeljs-0.8.1.min.js"></script>
+<script src="libs/tweenjs-0.6.1.min.js"></script>
+<script src="libs/movieclip-0.8.1.min.js"></script>
+<script src="libs/preloadjs-0.6.1.min.js"></script>
+<script src="06-网易小广告.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+	ss = ss||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+loader.loadFile({src:"images/06_网易小广告_atlas_.json", type:"spritesheet", id:"06_网易小广告_atlas_"}, true);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	var queue = evt.target;
+	ss["06_网易小广告_atlas_"] = queue.getResult("06_网易小广告_atlas_");
+	exportRoot = new lib._06网易小广告();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="700" height="90" style="background-color:#FFFFFF"></canvas>
+</body>
+</html>
